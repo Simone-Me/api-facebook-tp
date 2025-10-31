@@ -1,5 +1,3 @@
-DOC API : https://documenter.getpostman.com/view/41575768/2sB3Wny2ka#17bab6af-ea82-4b90-b472-a82b4846bd90
-
 # Facebook-like Events API
 
 A REST API for managing social events, groups, photo albums, surveys, and ticketing.
@@ -21,6 +19,23 @@ A REST API for managing social events, groups, photo albums, surveys, and ticket
 
 ## Installation
 
+add your own config.mjs to connect the BDD following this ex :
+
+```
+export default {
+  development: {
+    type: 'development',
+    port: 3000,
+    mongodb: 'mongodb+srv://<NAME>:<PASSWORD>@cluster0.8z5nqjn.mongodb.net/<SPACE>'
+  },
+  production: {
+    type: 'production',
+    port: 3000,
+    mongodb: 'mongodb+srv://<NAME>:<PASSWORD>@cluster0.8z5nqjn.mongodb.net/<SPACE>'
+  }
+};
+```
+
 ```bash
 npm install
 ```
@@ -38,11 +53,6 @@ mongodb: 'mongodb+srv://username:password@cluster.mongodb.net/database'
 Development mode:
 ```bash
 npm run dev
-```
-
-Production mode:
-```bash
-npm run prod
 ```
 
 API runs on `http://localhost:3000`
@@ -63,13 +73,5 @@ user-id: <USER_OBJECT_ID>
 
 ## API Documentation
 
-- **Users**: `/user/`, `/users/`
-- **Groups**: `/group/`, `/groups/`
-- **Events**: `/event/`, `/events/`
-- **Albums**: `/album/`, `/albums/`
-- **Photos**: `/album/:albumId/photo/`
-- **Messages**: `/group/:groupId/message/`, `/event/:eventId/message/`
-- **Surveys**: `/event/:eventId/survey/`, `/survey/:surveyId/question/`
-- **Tickets**: `/event/:eventId/ticket-type/`, `/event/:eventId/ticket/purchase`
+Creted with Postman : https://documenter.getpostman.com/view/41575768/2sB3Wny2ka#17bab6af-ea82-4b90-b472-a82b4846bd90
 
-Full endpoint details available in the controllers.
