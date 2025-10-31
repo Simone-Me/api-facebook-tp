@@ -83,8 +83,8 @@ const Events = class Events {
       try {
         const eventModel = new this.EventModel(req.body);
 
-                eventModel.Organisateurs.push(userId);
-        eventModel.Membres.push(userId);
+        // eventModel.Organisateurs.push(userId);
+        // eventModel.Membres.push(userId);
 
         if (req.body.Groupe) {
           const group = await this.GroupModel.findById(req.body.Groupe);
